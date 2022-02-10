@@ -120,13 +120,13 @@ solver:
 
 dataloader:
   # data_root: data
-  data_root: /data3/zzx/MSCOCO_Caption
+  data_root: /zzx_vlexp/VQ-Diffusion-my2/MSCOCO_Caption
   batch_size: 4
   num_workers: 4
   train_datasets: # a list of configures, so we can combine several schedulers
     - target: image_synthesis.data.mscoco_dataset.CocoDataset
       params:
-        data_root: /data3/zzx/MSCOCO_Caption
+        data_root: /zzx_vlexp/VQ-Diffusion-my2/MSCOCO_Caption
         phase: train
         im_preprocessor_config:
           target: image_synthesis.data.utils.image_preprocessor.DalleTransformerPreprocessor   # ImageNet
@@ -136,7 +136,7 @@ dataloader:
   validation_datasets:
     - target: image_synthesis.data.mscoco_dataset.CocoDataset
       params:
-        data_root: /data3/zzx/MSCOCO_Caption
+        data_root: /zzx_vlexp/VQ-Diffusion-my2/MSCOCO_Caption
         phase: val
         im_preprocessor_config:
           target: image_synthesis.data.utils.image_preprocessor.DalleTransformerPreprocessor

@@ -25,7 +25,7 @@ class CocoDataset(Dataset):
 
         self.num = len(self.json_file['annotations'])
         self.image_prename = "COCO_" + phase + "2014_"
-        self.folder_path = os.path.join(data_root, phase+'2014', phase+'2014')
+        self.folder_path = os.path.join(data_root, phase+'2014')
  
     def __len__(self):
         return self.num
