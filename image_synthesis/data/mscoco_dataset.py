@@ -2,6 +2,7 @@ from torch.utils.data import Dataset
 import numpy as np
 import io
 from PIL import Image
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 import os
 import json
 import random
